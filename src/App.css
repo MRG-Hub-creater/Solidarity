@@ -1,0 +1,159 @@
+.arrow{
+    font-family: 60px;
+}
+.logoName{
+    color: #125727;
+}
+.logo {
+  width: 100px;
+  
+  height: auto;
+}
+.textLogo{
+    width: 300px;
+    height:auto;
+
+}
+.mapImage{
+        border-radius:'15px' ;
+        box-shadow:' 0px 0px 10px 0px rgba(0, 0, 0, 0.5)';
+    }
+
+ .quote-overlay{
+    position:absolute;
+    bottom:10%;
+    margin-left:50%;
+    transform:translate(-50%);
+    background-color:rgba(0,0,0,0.6);
+    backdrop-filter:blur(6px);
+    padding:1.5rem 2rem;
+    border-radius:15px;   
+    text-align:center;
+    width:80%;
+ }  
+ .quote-heading{
+    color: aliceblue;
+
+ }
+ .qoute-content{
+    color:aliceblue;
+    font-size: 1.5rem;
+ }
+
+ .card{
+    border: none;
+    width:300px;
+    height:100%;
+ }
+.image-container{
+    position: relative;
+    width:100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.district-bg{
+    height:auto;
+    width:100%;
+    display: block;
+    object-fit: cover;
+    filter:brightness(70%);
+    
+}
+.overlay{
+    position: absolute;
+    top:50%;
+    left:10%;
+    color:white;
+    font-size: 3rem;
+    font-weight:bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    z-index: 2;
+}
+ .district-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 50px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+    }
+.district-name {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0c9758;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+.card-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+ .leader {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+.leader img {
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #e6e6e6;
+    }
+   .leader-name {
+      margin-top: 5px;
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    .address {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+      color: #1a1a1a;
+    }
+
+    .address h4 {
+      color: #0c9758;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .address h4::before {
+      
+      margin-right: 8px;
+    }
+
+
+
+
+@media screen and (max-width:900px) {
+    .mapImage{
+        border-radius:'15px' ;
+        box-shadow:' 0px 0px 10px 0px rgba(0, 0, 0, 0.5)';
+        width: 375px;
+        height:375px;
+    }
+    .logo{
+        width:74px;
+        height:auto;
+    }
+    .textLogo{
+        width:200px;
+        height: auto;
+    }
+    .overlay{
+        font-size: 2rem;
+    }
+}
