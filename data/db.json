@@ -23,44 +23,100 @@
     "district":[
         {"id":1,
         "districtName":"Thanjavur",
-        "presidentName":"PersonA",
-        "secretaryName":"PersonB",
+        "presidentName":"M.Israr Ahamed",
+        "presidentImage":"../src/assets/districtLeaders/thanjavur.jpg",
+        "secretaryName":"SalmanKhan",
+        "secretaryImage":"../src/assets/districtLeaders/thanjavurS.jpg",
         "Address":"no 42, Keela vasal, Thanjavur",
         "PhoneNo":987654210
 
     },{"id":2,
-        "districtName":"Trichy",
-        "presidentName":"Personc",
-        "secretaryName":"PersonD",
+        "districtName":"Dharmapuri",
+        "presidentName":"Haaris",
+        "presidentImage":"../src/assets/districtLeaders/dharmapuri.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
         "Address":"no 42, Keela vasal, Thanjavur",
-        "PhoneNo":98765421014134
+        "PhoneNo":987654210
 
     },{"id":3,
-        "districtName":"Chennai",
-        "presidentName":"PersonE",
-        "secretaryName":"PersonF",
+        "districtName":"Kayathar",
+        "presidentName":"Abdul Kareem Anas",
+        "presidentImage":"../src//assets/districtLeaders/kayathar.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
         "Address":"no 42, Keela vasal, Thanjavur",
-        "PhoneNo":987654210141
+        "PhoneNo":987654210
 
     },
-    {"id":4,
-        "districtName":"Chennai",
-        "presidentName":"PersonE",
-        "secretaryName":"PersonF",
+   {"id":4,
+        "districtName":"Krishnagiri",
+        "presidentName":"Ashwaq Ahamed",
+        "presidentImage":"../src/assets/districtLeaders/krishnagiri.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
         "Address":"no 42, Keela vasal, Thanjavur",
-        "PhoneNo":987654210141
+        "PhoneNo":987654210
 
     },
     {"id":5,
-        "districtName":"Chennai",
-        "presidentName":"PersonE",
-        "secretaryName":"PersonF",
+        "districtName":"Perambalur",
+        "presidentName":"Muhammadh Ashraf",
+        "presidentImage":"../src/assets/districtLeaders/perambalur.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
         "Address":"no 42, Keela vasal, Thanjavur",
-        "PhoneNo":987654210141
+        "PhoneNo":987654210
+
+    },{"id":6,
+        "districtName":"Trichy",
+        "presidentName":"Muhammadh Riyasudeen",
+        "presidentImage":"../src/assets/districtLeaders/trichy.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+
+    },{"id":7,
+        "districtName":"Salem",
+        "presidentName":"Muhammadh siraj",
+        "presidentImage":"../src/assets/districtLeaders/salem.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+
+    },{"id":8,
+        "districtName":"Udumalai",
+        "presidentName":"Jahangir",
+        "presidentImage":"../src/assets/districtLeaders/udumalai.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+
+    },{"id":9,
+        "districtName":"Vaniyambadi",
+        "presidentName":"Mubashir",
+        "presidentImage":"../src/assets/districtLeaders/vaniyambadi.jpg",
+        "secretaryName":"PersonB",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
 
     }
 
-    ] 
+    ] ,
+    "state":[
+        {
+            "id":1,
+            "presidentName":"Mohamed Riyas",
+            "presidentImage":"../src/assets/districtLeaders/vaniyambadi.jpg",
+            "secretaryName":"PersonB",
+            "secretaryImage":""
+            
+        }
+    ]
 
         
 

@@ -85,9 +85,9 @@ function AboutUs(){
 
                                 
 
-                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional charity theme based</p>
+                                <p>We’re still working on adding our history here.</p>
 
-                                <p>You are not allowed to redistribute this template ZIP file on any other template collection website. Please contact TemplateMo for more information.</p>
+                                <p>Please check back soon!</p>
 
                             </div>
                         </div>

@@ -1,21 +1,18 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect, use } from "react"
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 
 function NewsList(){
     const [newsList, setNews] = useState(null);
     const navigate = useNavigate();
-    
-        useEffect(()=>{
-            fetch('http://localhost:3000/news')
-            .then(response=> { 
-                return response.json()})
-                .then((data)=>{
-                setNews(data);
-                }).catch(err=>{
-                console.log(err);
+
+        useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
+            .then((data)=> data.json())
+            .then((data)=>{setNews(data.news);
+              console.log(newsList)
             })
-        },[])
+            .catch(err=>console.log("Error,",err))},[])   
 
     return(
         <>

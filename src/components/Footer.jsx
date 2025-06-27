@@ -37,16 +37,16 @@ function Footer(){
                         <p className="text-white d-flex mb-2">
                             <i className="bi-telephone me-2"></i>
 
-                            <a href="tel: " className="site-footer-link">
-                               9876543210
+                            <a href="tel:+91 9791522986 " className="site-footer-link">
+                               9791522986
                             </a>
                         </p>
 
                         <p className="text-white d-flex">
                             <i className="bi-envelope me-2"></i>
 
-                            <a href="" className="site-footer-link">
-                                mail@gmail.com
+                            <a href="mailto:solidaritytamilnadu@gmail.com" className="site-footer-link">
+                                solidaritytamilnadu@gmail.com
                             </a>
                         </p>
 

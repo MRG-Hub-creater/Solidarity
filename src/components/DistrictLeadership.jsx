@@ -2,21 +2,22 @@ import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import DistrictImage from '../assets/Leadership/image92.jpg'
+import AnonymousImage from '../assets/districtLeaders/AnonymousImage.jpg'
 function DistrictLeadership() {
 
   const [districtList, setDistrict]=useState([]);
-  useEffect(()=>{fetch("http://localhost:3000/district")
+  useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
     .then((data)=> data.json())
-    .then((data)=>{setDistrict(data);
+    .then((data)=>{setDistrict(data.district);
       console.log(districtList)
     })
-    .catch(err=>console.log("Error,",err))},[])
+    .catch(err=>console.log("Error,",err))},[])   
   
 
   return (
     <>
      <Header/>
-      <div className='container-fluid section-padding'>
+      <div className='container-fluid my-4'>
     <div className='container'>
         <div className='image-container'>
             <img className='district-bg' src={DistrictImage} alt="Image" />
@@ -24,6 +25,15 @@ function DistrictLeadership() {
         </div>
     </div>
     {districtList&&districtList.map((district)=>{
+       let secretaryImage;
+     {
+      if(district.secretaryImage===""){
+         secretaryImage = AnonymousImage;
+      }
+      else{
+        secretaryImage=district.secretaryImage;
+      }
+     }
       return(
         <div key={district.id} className="district-card">
           <div className="district-name">{district.districtName}   </div>
@@ -31,21 +41,15 @@ function DistrictLeadership() {
         <div className='row'>
           <div className="leader">
               <h4>President</h4>
-              <img className='districtImage'src={DistrictImage} alt="President"/>
+              <img className='districtImage'src={district.presidentImage} alt="President"/>
               <div className="leader-name">{district.presidentName}</div>
             </div>
             <div className="leader">
               <h4>Secretary</h4>
-              <img className='districtImage' src={DistrictImage} alt="Secretary"/>
+              <img className='districtImage' src={secretaryImage} alt="Secretary"/>
               <div className="leader-name">{district.secretaryName}</div>
             </div>
-            <div className="address">
-              <h4>Office Address</h4>
-              <p>
-                {district.Address}<br/>
-                Phone: {district.PhoneNo}
-              </p>
-            </div>
+            
             </div>
       </div>
       )

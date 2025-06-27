@@ -1,8 +1,9 @@
 import logo from '../assets/FlagLogo.jpg'
 import textLogo from '../assets/SolidarityTextLogo.png'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 function Header(){
+
     return(
         <>
         <header className="site-header ">
@@ -19,7 +20,7 @@ function Header(){
                             <i className="bi-envelope me-2"></i>
 
                             <a href="mailto:info@company.com">
-                                mail@gmail.com
+                                solidaritytamilnadu@gmail.com
                             </a>
                         </p>
                     </div>
@@ -73,11 +74,25 @@ function Header(){
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link click-scroll" to={'/blogList'}>Blogs</Link>
+                            <Link className="nav-link click-scroll" to={'/blogList'}>News</Link>
                         </li>
 
+         
+              {/*******
+              
                         <li className="nav-item dropdown">
-                            <a className="nav-link click-scroll dropdown-toggle" href="" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">LeaderShips</a>
+                           <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Panel</Link>
+
+                            <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                              <li>  <Link className="dropdown-item" to={'/addBlog'}>Add Blog</Link></li>
+                                <li><Link className="dropdown-item" to={'/addNews'}>Add News</Link></li>
+                                <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>
+                            </ul>
+                        </li>
+                       */}
+
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">LeaderShips</Link>
 
                             <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                               <li>  <Link className="dropdown-item" to={'/state'}>State Leaders</Link></li>

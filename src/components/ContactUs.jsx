@@ -37,17 +37,17 @@ function ContactUs(){
                                     <p className="d-flex mb-2">
                                         <i className="bi-telephone me-2"></i>
                                         
-                                        <a href="tel: ">
-                                            9876543210
+                                        <a href="tel:+91 9791522986 ">
+                                            9791522986
                                         </a>
                                     </p>
 
                                     <p className="d-flex">
                                         <i className="bi-envelope me-2"></i>
 
-                                        <a href="mailto:">
-                                            mail@gmail.com
-                                        </a>
+                                        <a href="mailto:info@company.com">
+                                solidaritytamilnadu@gmail.com
+                            </a>
                                     </p>
                                 </div>
                             </div>
@@ -57,8 +57,10 @@ function ContactUs(){
                             <form className="custom-form contact-form" action="#" method="post" role="form">
                                 <h2>Contact form</h2>
 
-                                <p className="mb-4">Or, you can just send an email:
-                                    <a href="#">mail@gmail.com</a>
+                                <p >Or, you can just send an email:</p>
+                                  <p >   <a href="mailto:info@company.com">
+                                            solidaritytamilnadu@gmail.com
+                                    </a>
                                 </p>
                                 <div className="row">
                                     <div className="col-lg-12  col-12">

@@ -14,9 +14,11 @@ import LeaderShip from './components/LeaderShip.jsx'
 import ContactUsDetail from './components/ContactUsDetail.jsx'
 import Activity from './components/Activity.jsx'
 import BlogList from './components/BlogList.jsx'
-import Login from './components/Login.jsx'
 import DistrictLeadership from './components/DistrictLeadership.jsx'
-
+import AddBlog from './adminPage/AddBlog.jsx'
+import AddNews from './adminPage/AddNews.jsx'
+import AddLeadership from './adminPage/AddLeadership.jsx'
+import AdminLogin from './AdminLogin.jsx'
 
 
 const router = createBrowserRouter([
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
 },
 {
   path:'/admin',
-  element:<Login/>
+  element:<AdminLogin/>
   
 },
 {
@@ -58,6 +60,17 @@ const router = createBrowserRouter([
 ,{
   path:'/contact',
   element:<ContactUsDetail/>
+},{
+  path:'/addBlog',
+  element:<AddBlog/>
+},
+{
+  path:'/addNews',
+  element:<AddNews/>
+},
+{
+  path:'/addLeadership',
+  element:<AddLeadership/>
 }
 ])
 

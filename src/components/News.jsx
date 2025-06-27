@@ -4,21 +4,19 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer'
+import axios from "axios"
 
 function News(){
         const {id} =useParams();
         const [news, setNews] = useState(null);
-    useEffect(()=>{
-        fetch('http://localhost:3000/news/'+id)
-                    .then(response=> { 
-                        return response.json()})
-                        .then((data)=>{
-                        setNews(data);
-                        }).catch(err=>{
-                        console.log(err);
-                    });
-
-                },[id] )
+   useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
+            .then((data)=> data.json())
+            .then((data)=>{
+                const newsItem = data.news[id];
+                
+                setNews(newsItem);
+              console.log(newsItem);})
+            .catch((err)=>console.log("Error,",err))},[id]); 
             return(
                 <>
                 <Header/>
@@ -26,11 +24,11 @@ function News(){
                      
                         
                     {news&& <div className="row">
-                        <div className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div  key={news.id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className=" justify-content-center align-items-center" >
                                 <p className="featured-block-text">{news.title}</p>
                                 <p>{news.content}</p>
-                                <img src={news.image} alt="Image" />
+                                <img className="newsImage" src={news.image} alt="Image" />
                             </div>
                         </div>
                         </div>
