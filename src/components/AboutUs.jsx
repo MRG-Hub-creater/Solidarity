@@ -106,7 +106,7 @@ function AboutUs(){
 
                         <div className="col-lg-5 col-12">
 
-                            <a href="https://forms.gle/wbpCfAWCbURdwHiX6" className="custom-btn btn smoothscroll">Become a Member</a>
+                            <a href="https://forms.gle/wbpCfAWCbURdwHiX6" target='_blank' rel='noopener noreferrer' className="custom-btn btn smoothscroll join">Become a Member</a>
                         </div>
 
                     </div>

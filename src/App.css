@@ -94,8 +94,8 @@
 .card-content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
+      justify-content: center;
+      gap: 1rem;
     }
  .leader {
       flex: 1 1 200px;
@@ -112,6 +112,9 @@
       margin-top: 5px;
       font-weight: bold;
       color: #1a1a1a;
+    }
+    .leader h4{
+      color: #0c5d7e;
     }
 
     .address {
@@ -139,6 +142,10 @@
   width:400px;
   height:400px;
 }
+
+
+
+
 
 /***ADMIN LOGIN **/
 
@@ -363,5 +370,8 @@
     }
     .overlay{
         font-size: 2rem;
+    }
+    .join{
+       margin-top: 30px;
     }
 }

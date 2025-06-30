@@ -54,7 +54,7 @@ function ContactUs(){
                         </div>
 
                         <div className="col-lg-5 col-12 mx-auto">
-                            <form className="custom-form contact-form" action="#" method="post" role="form">
+                            <form className="custom-form contact-form" action="" method="post" role="form">
                                 <h2>Contact form</h2>
 
                                 <p >Or, you can just send an email:</p>
@@ -74,7 +74,7 @@ function ContactUs(){
 
                                 <textarea name="message" rows="5" className="form-control" id="message" placeholder="What can we help you?"></textarea>
 
-                                <button type="submit" className="form-control">Send Message</button>
+                                <button  className="form-control">Send Message</button>
                             </form>
                         </div>
 

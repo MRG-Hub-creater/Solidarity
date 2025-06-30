@@ -23,7 +23,9 @@ function PastLeader() {
        </div>
        {pastLeaders&&pastLeaders.map((pastLeader)=>{
           let secretaryImage;
+          let secretaryName;
           let presidentImage;
+          let presidentName;
         {
          if(pastLeader.secretaryImage===""){
             secretaryImage = AnonymousImage;
@@ -37,6 +39,7 @@ function PastLeader() {
          else{
             presidentImage=pastLeader.presidentImage;
          }
+        
          }
         
          return(

@@ -20,6 +20,7 @@ import AddNews from './adminPage/AddNews.jsx'
 import AddLeadership from './adminPage/AddLeadership.jsx'
 import AdminLogin from './AdminLogin.jsx'
 import PastLeader from './pages/PastLeader.jsx'
+import JoinMember from './pages/JoinMember.jsx'
 
 
 
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
 {
   path:'/addLeadership',
   element:<AddLeadership/>
+},
+{
+  path:'/joinMember',
+  element:<JoinMember/>
 }
 ])
 

@@ -49,11 +49,11 @@ function Header(){
         </header>
         <nav className="navbar navbar-expand-lg bg-light shadow-lg sticky-top">
             <div className="container-fluid">
-                <a className="navbar-brand ms-2" href="/">
+                <Link className="navbar-brand ms-2" to="/">
                     <img src={logo} className="logo img-fluid" alt="Solidarity Youth Organization TN"/>
                     <img src={textLogo} className="textLogo img-fluid" alt="Solidarity Youth Organization TN"/>
                    
-                </a>
+                </Link>
 
                 <button className="navbar-toggler mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -106,7 +106,7 @@ function Header(){
                         </li>
 
                         <li className="nav-item me-4 ">
-                            <a className="nav-link custom-btn custom-border-btn btn" href="https://forms.gle/wbpCfAWCbURdwHiX6">Join</a>
+                            <Link to="/joinMember" className="nav-link custom-btn custom-border-btn btn">Join</Link>
                         </li> 
                     </ul>
                 </div>
