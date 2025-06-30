@@ -72,8 +72,8 @@
         "districtName":"Trichy",
         "presidentName":"Muhammadh Riyasudeen",
         "presidentImage":"../src/assets/districtLeaders/trichy.jpg",
-        "secretaryName":"PersonB",
-        "secretaryImage":"",
+        "secretaryName":"Sheik Abdullah Sha",
+        "secretaryImage":"../src/assets/districtLeaders/trichyS.jpg",
         "Address":"no 42, Keela vasal, Thanjavur",
         "PhoneNo":987654210
 
@@ -99,12 +99,54 @@
         "districtName":"Vaniyambadi",
         "presidentName":"Mubashir",
         "presidentImage":"../src/assets/districtLeaders/vaniyambadi.jpg",
-        "secretaryName":"PersonB",
+        "secretaryName":"",
         "secretaryImage":"",
         "Address":"no 42, Keela vasal, Thanjavur",
         "PhoneNo":987654210
 
+    },{
+        "id":10,
+        "districtName":"Manapparai",
+        "presidentName":"H.Mohammed Ubaithulla",
+        "presidentImage":"../src/assets/districtLeaders/manapparai.jpg",
+        "secretaryName":"",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+    },{
+        "id":11,
+        "districtName":"Theni",
+        "presidentName":"N.Harish",
+        "presidentImage":"../src/assets/districtLeaders/theni.jpg",
+        "secretaryName":"",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+    },
+    {
+        "id":12,
+        "districtName":"Thirumangalam",
+        "presidentName":"A.Abdul wahith",
+        "presidentImage":"../src/assets/districtLeaders/thirumangalam.jpg",
+        "secretaryName":"",
+        "secretaryImage":"",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
+    },{
+        "id":13,
+        "districtName":"Coimbatore",
+        "presidentName":"Sinuj Ahamed",
+        "presidentImage":"/images/districtLeaders/1.png",
+        "secretaryName":"A.Mohamed Yasir",
+        "secretaryImage":"/images/districtLeaders/2.png",
+        "secretaryName2":"S.Riyaz",
+        "secretaryImage2":"/images/districtLeaders/3.png",
+        "secretaryName3":"M.Muhammadh Riyazudeen",
+        "secretaryImage3":"/images/districtLeaders/4.png",
+        "Address":"no 42, Keela vasal, Thanjavur",
+        "PhoneNo":987654210
     }
+
 
     ] ,
     "state":[
@@ -115,6 +157,25 @@
             "secretaryName":"PersonB",
             "secretaryImage":""
             
+        }
+    ],
+    "pastLeaders":[
+       
+        {
+          "id":1,
+            "presidentName":"A.Kamaludeen",
+            "presidentImage":"../src/assets/pastLeaders/kamaludeen.JPG",
+            "secretaryName":"Syed Mohamed Hussain",
+            "secretaryImage":"",
+            "servicePeriod":"2023-2025"
+        },
+         {
+            "id":2,
+            "presidentName":"Dr.Abdul Hakeem",
+            "presidentImage":"../src/assets/pastLeaders/abdulHakeem.JPG",
+            "secretaryName":"A.Kamaludeen",
+            "secretaryImage":"../src/assets/pastLeaders/kamaludeen.JPG",
+            "servicePeriod":"2021-2023"
         }
     ]
 

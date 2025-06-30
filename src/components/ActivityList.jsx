@@ -53,18 +53,6 @@ function ActivityList() {
                             </div>
                         </div>
 
-                      
-                        
-                       
-                         <div className="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div className="featured-block d-flex justify-content-center align-items-center card">
-                                <a href="/" className="d-block">
-                                    <img src={Invite} className="featured-block-image img-fluid" alt="" />
-
-                                    <p className="featured-block-text">Inviting to Islam</p>
-                                </a>
-                            </div>
-                        </div>
                          <div className="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className="featured-block d-flex justify-content-center align-items-center card">
                                 <a href="/" className="d-block">
@@ -101,15 +89,7 @@ function ActivityList() {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div className="featured-block d-flex justify-content-center align-items-center card">
-                                <a href="/" className="d-block">
-                                    <img src={Quran} className="featured-block-image img-fluid " alt="" />
-
-                                    <p className="featured-block-text">Quran Discussion</p>
-                                </a>
-                            </div>
-                        </div>
+                       
                          <div className="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className="featured-block d-flex justify-content-center align-items-center card">
                                 <a href="/" className="d-block">

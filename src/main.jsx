@@ -19,6 +19,7 @@ import AddBlog from './adminPage/AddBlog.jsx'
 import AddNews from './adminPage/AddNews.jsx'
 import AddLeadership from './adminPage/AddLeadership.jsx'
 import AdminLogin from './AdminLogin.jsx'
+import PastLeaders from './pages/pastLeaders.jsx'
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,9 @@ const router = createBrowserRouter([
 {
   path:'/district',
   element:<DistrictLeadership/>
+},{
+  path:'/pastLeaders',
+  element:<PastLeaders/>
 }
 ,{
   path:'/contact',

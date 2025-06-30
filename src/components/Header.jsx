@@ -95,8 +95,9 @@ function Header(){
                             <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">LeaderShips</Link>
 
                             <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                              <li>  <Link className="dropdown-item" to={'/state'}>State Leaders</Link></li>
+                                <li><Link className="dropdown-item" to={'/state'}>State Leaders</Link></li>
                                 <li><Link className="dropdown-item" to={'/district'}>District Leaders</Link></li>
+                                <li><Link className="dropdown-item" to={'/pastLeaders'}>Our Past Leaders</Link></li>
                             </ul>
                         </li>
 
