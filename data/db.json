@@ -24,9 +24,9 @@
         {"id":1,
         "districtName":"Thanjavur",
         "presidentName":"M.Israr Ahamed",
-        "presidentImage":"../src/assets/districtLeaders/thanjavur.jpg",
+        "presidentImage":"/images/districtLeaders/thanjavur.jpg",
         "secretaryName":"SalmanKhan",
-        "secretaryImage":"../src/assets/districtLeaders/thanjavurS.jpg",
+        "secretaryImage":"/images/districtLeaders/thanjavurS.jpg",
         "Address":"no 42, Keela vasal, Thanjavur",
         "PhoneNo":987654210
 
