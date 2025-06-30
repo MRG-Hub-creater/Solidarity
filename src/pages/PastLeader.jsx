@@ -5,18 +5,16 @@ import DistrictImage from '../assets/Leadership/image92.jpg'
 import AnonymousImage from '../assets/districtLeaders/AnonymousImage.jpg'
 
 
-function PastLeaders() {
+function PastLeader() {
 
-    const [pastLeaders, setPastLeaders]=useState([]);
+     const [pastLeaders, setPastLeaders]=useState([]);
     useEffect(()=>{
         fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json").then((data)=>data.json()).then((data)=>setPastLeaders(data.pastLeaders)).catch(err=>console.log("Error, ",err))}
         ,[])
-
-
   return (
    <>
    <Header/>
-    <div className='container-fluid my-4'>
+   <div className='container-fluid my-4'>
        <div className='container'>
            <div className='image-container'>
                <img className='district-bg' src={DistrictImage} alt="Image" />
@@ -67,9 +65,11 @@ function PastLeaders() {
        
        )}
        </div>
+
+
    <Footer/>
    </>
   )
 }
 
-export default PastLeaders
+export default PastLeader
