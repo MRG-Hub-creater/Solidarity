@@ -78,6 +78,21 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
                         </div>
                         </div>
                        </div>
+                        <div className='district-card'>
+                         <div className='row'>
+                          <div className="leader">
+                          <h4 className='my-3'>Secretary</h4>
+                          <img className='districtImage' src={secretaryImage} alt="Secretary"/>
+                          <div className="leader-name my-3">{state.secretaryName}</div>
+                        </div>
+                        <div className="leader">
+                          <h4 className='my-3'>Secretary</h4>
+                          <img className='districtImage' src={state.secretaryImage2} alt="Secretary"/>
+                          <div className="leader-name my-3">{state.secretaryName2}</div>
+                        </div>
+                        </div>
+                       </div>
+                       
                   </div>
                   
                   )
