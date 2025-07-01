@@ -7,9 +7,11 @@ import Slide from "./components/Slide"
 import ActivityList from "./components/ActivityList"
 
 
+
 function App(){
   return(
     <> 
+    
     <Header/>
     <Slide/>
     <ActivityList/>

@@ -101,26 +101,25 @@ function DistrictLeadership() {
                                     <div className="leader-name">{secretaryName}</div>
                                   </div>
                                   </div>
-                                  <div className='row my-3'>
-                                    <div className="leader">
-                                    <h4>Joint Secretary</h4>
-                                    <img className='districtImage' src={secretaryImage2} alt="Secretary"/>
-                                    <div className="leader-name">{secretaryName2}</div>
-                                  </div>
-                                  <div className="leader">
-                                    <h4>Joint Secretary</h4>
-                                    <img className='districtImage' src={secretaryImage3} alt="Secretary"/>
-                                    <div className="leader-name">{secretaryName3}</div>
-                                  </div>
-                                  
-                                  </div>
+                                  {district.secretaryName2&&(
+                                        <div className='row my-3'>
+                                          <div className="leader">
+                                          <h4>Joint Secretary</h4>
+                                          <img className='districtImage' src={secretaryImage2} alt="Secretary"/>
+                                          <div className="leader-name">{secretaryName2}</div>
+                                        </div>
+                                        {district.secretaryName3&&(
+                                        <div className="leader">
+                                          <h4>Joint Secretary</h4>
+                                          <img className='districtImage' src={secretaryImage3} alt="Secretary"/>
+                                          <div className="leader-name">{secretaryName3}</div>
+                                        </div>
+                                        )}
+                                        </div>
+                                      )}
                             </div>
       )
-
     }
-    
-    
-    
     )}
     </div>
     
