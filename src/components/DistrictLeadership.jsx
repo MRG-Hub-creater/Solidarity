@@ -86,33 +86,35 @@ function DistrictLeadership() {
      }
       return(
         
-        <div key={district.id} className="district-card">
-          <div className="district-name">{district.districtName}   </div>
-          <div className="card-content"></div>
-        <div className='row'>
-          <div className="leader">
-              <h4>President</h4>
-              <img className='districtImage'src={presidentImage} alt="President"/>
-              <div className="leader-name">{presidentName}</div>
-            </div>
-            <div className="leader">
-              <h4>Secretary</h4>
-              <img className='districtImage' src={secretaryImage} alt="Secretary"/>
-              <div className="leader-name">{secretaryName}</div>
-            </div>
-              <div className="leader">
-              <h4>Joint Secretary</h4>
-              <img className='districtImage' src={secretaryImage2} alt="Secretary"/>
-              <div className="leader-name">{secretaryName2}</div>
-            </div>
-             <div className="leader">
-              <h4>Joint Secretary</h4>
-              <img className='districtImage' src={secretaryImage3} alt="Secretary"/>
-              <div className="leader-name">{secretaryName3}</div>
-            </div>
-            
-            </div>
-      </div>
+                              <div key={district.id} className="district-card">
+                                <div className="district-name">{district.districtName}   </div>
+                                <div className="card-content"></div>
+                              <div className='row my-3'>
+                                <div className="leader">
+                                    <h4>President</h4>
+                                    <img className='districtImage'src={presidentImage} alt="President"/>
+                                    <div className="leader-name">{presidentName}</div>
+                                  </div>
+                                  <div className="leader">
+                                    <h4>Secretary</h4>
+                                    <img className='districtImage' src={secretaryImage} alt="Secretary"/>
+                                    <div className="leader-name">{secretaryName}</div>
+                                  </div>
+                                  </div>
+                                  <div className='row my-3'>
+                                    <div className="leader">
+                                    <h4>Joint Secretary</h4>
+                                    <img className='districtImage' src={secretaryImage2} alt="Secretary"/>
+                                    <div className="leader-name">{secretaryName2}</div>
+                                  </div>
+                                  <div className="leader">
+                                    <h4>Joint Secretary</h4>
+                                    <img className='districtImage' src={secretaryImage3} alt="Secretary"/>
+                                    <div className="leader-name">{secretaryName3}</div>
+                                  </div>
+                                  
+                                  </div>
+                            </div>
       )
 
     }

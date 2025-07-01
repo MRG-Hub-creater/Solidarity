@@ -6,9 +6,11 @@ import { useState,useEffect } from 'react'
 import AnonymousImage from '../assets/districtLeaders/AnonymousImage.jpg'
 function LeaderShip() {
   const [stateList, setState]=useState([]);
+  const [stateExecutiveList,setExecutive]=useState([]);
 useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
     .then((data)=> data.json())
     .then((data)=>{setState(data.state);
+      setExecutive(data.stateExecutive);
       console.log(districtList)
     })
     .catch(err=>console.log("Error,",err))},[])   
@@ -65,35 +67,24 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
                         </div>
                         </div>
                         <div className='district-card'>
-                         <div className='row'>
+                           <div className="district-name"> Secretarties </div>
+                         <div className='row my-5'>
                           <div className="leader">
-                          <h4 className='my-3'>Secretary</h4>
+                       
                           <img className='districtImage' src={secretaryImage} alt="Secretary"/>
                           <div className="leader-name my-3">{state.secretaryName}</div>
                         </div>
                         <div className="leader">
-                          <h4 className='my-3'>Secretary</h4>
+                          
                           <img className='districtImage' src={state.secretaryImage2} alt="Secretary"/>
                           <div className="leader-name my-3">{state.secretaryName2}</div>
                         </div>
                         </div>
                        </div>
-                        <div className='district-card'>
-                         <div className='row'>
-                          <div className="leader">
-                          <h4 className='my-3'>Secretary</h4>
-                          <img className='districtImage' src={secretaryImage} alt="Secretary"/>
-                          <div className="leader-name my-3">{state.secretaryName}</div>
-                        </div>
-                        <div className="leader">
-                          <h4 className='my-3'>Secretary</h4>
-                          <img className='districtImage' src={state.secretaryImage2} alt="Secretary"/>
-                          <div className="leader-name my-3">{state.secretaryName2}</div>
-                        </div>
-                        </div>
-                       </div>
+                        
                        
                   </div>
+                  
                   
                   )
             
@@ -102,8 +93,54 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
                 
                 
                 )}
-    </div>
-    
+          </div>
+          {stateExecutiveList&&stateExecutiveList.map((stateExecutive)=>{
+            return(
+                    <div className='district-card'>
+                           <div className="district-name">Executive Members   </div>
+                         <div className='row my-5'>
+                          <div className="leader">
+                          
+                          <img className='districtImage' src={stateExecutive.secretaryImage} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName}</div>
+                        </div>
+                        <div className="leader">
+                         
+                          <img className='districtImage' src={stateExecutive.secretaryImage2} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName2}</div>
+                        </div>
+                        <div className="leader">
+                        
+                          <img className='districtImage' src={stateExecutive.secretaryImage3} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName3}</div>
+                        </div>
+                        </div>
+                          <div className='row'>
+                          <div className="leader">
+                         
+                          <img className='districtImage' src={stateExecutive.secretaryImage4} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName4}</div>
+                        </div>
+                        <div className="leader">
+                          
+                          <img className='districtImage' src={stateExecutive.secretaryImage5} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName5}</div>
+                        </div>
+                        <div className="leader">
+                         
+                          <img className='districtImage' src={stateExecutive.secretaryImage6} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName6}</div>
+                        </div>
+                        <div className="leader">
+                         
+                          <img className='districtImage' src={stateExecutive.secretaryImage7} alt="Secretary"/>
+                          <div className="leader-name my-3">{stateExecutive.secretaryName7}</div>
+                        </div>
+                        </div>
+                        
+                       </div>
+            )
+})}
     <Footer/>
     
     </>
