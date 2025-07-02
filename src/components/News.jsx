@@ -12,10 +12,10 @@ function News(){
    useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
             .then((data)=> data.json())
             .then((data)=>{
-                const newsItem = data.news[id];
-                
+                const newsItem = data.news.find(item=>item.id==id);
+               
                 setNews(newsItem);
-              console.log(newsItem);})
+             })
             .catch((err)=>console.log("Error,",err))},[id]); 
             return(
                 <>
