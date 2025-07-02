@@ -1,7 +1,7 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import AboutImage from '../assets/AboutUs.jpg'
-import DistrictImage from '../assets/Leadership/image92.jpg'
+import DistrictImage from '/images/news/aboutUs.jpg'
 function AboutUSDetailed(){
     return(
         <>
@@ -11,7 +11,10 @@ function AboutUSDetailed(){
                         <div className='container-fluid my-4 '>
                                     <div className='container'>
                                         <div className='image-container'>
-                                            <img className='district-bg' src={DistrictImage} alt="Image" />
+                                           
+                                                <img className='district-bg' src={DistrictImage} alt="Image" />
+                                           
+                                            
                                             <h1 className='overlay'>About Us</h1>
                                 
                                         </div>
@@ -22,8 +25,8 @@ function AboutUSDetailed(){
                     <div className="row my-4">
                                 
                                 <div className="col-lg-6 col-12 mb-5 mb-lg-0">
-                                    <h2>Solidarity TamilNadu</h2>
-                                <p>Solidarity Tamil Nadu is a vibrant, youth-driven organization devoted to nurturing a society grounded in justice, equity, and Islamic values. We are a movement built on the belief that positive social transformation begins with conscious individuals and committed communities. Rooted in this philosophy, we empower youth to become agents of change—morally guided, socially active, and intellectually alert.
+                                    <h2 className='newsTitle'>Solidarity TamilNadu</h2>
+                                <p className='aboutContent mr-5'>Solidarity Tamil Nadu is a vibrant, youth-driven organization devoted to nurturing a society grounded in justice, equity, and Islamic values. We are a movement built on the belief that positive social transformation begins with conscious individuals and committed communities. Rooted in this philosophy, we empower youth to become agents of change—morally guided, socially active, and intellectually alert.
                                     Our activities span across various domains including Tarbiyah (spiritual and moral development), Dawah (public awareness and countering hate narratives), Mahalla empowerment, education and career guidance, youth-oriented events, and digital activism. Through these interconnected efforts, we aim to strengthen both individual character and community capacity.
                                     We host mega state-level and district-level events, organize impactful campaigns like the Anti-Drug Campaign 2.0, and support community development initiatives such as cleaning masjids, maintaining graveyards, and field engagement in Mahallas. Our ideology training programs like Payilarangam foster deeper understanding and conviction among young minds, while our online presence ensures that our voice reaches far beyond physical spaces.
                                     With an emphasis on career-focused skill-building, we’ve initiated employment training centers, business networking hubs, and career counseling platforms. To guide the ideological and spiritual compass of youth, we conduct Jummah bayaans through trained speakers and support structured Islamic learning.

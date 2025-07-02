@@ -1,16 +1,14 @@
+import React from 'react'
 import { useState,useEffect, use } from "react"
 import { Link, useNavigate } from "react-router-dom";
-import newsImg from '/logo.png'
 
-
-function NewsList(){
-    const [newsList, setNews] = useState(null);
+function UpcomingEvents() {
+ const [eventList, setEvent] = useState(null);
     const navigate = useNavigate();
 
         useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
             .then((data)=> data.json())
-            .then((data)=>{setNews(data.news);
-              console.log(newsList)
+            .then((data)=>{setEvent(data.event);
             })
             .catch(err=>console.log("Error,",err))},[])   
 
@@ -21,32 +19,32 @@ function NewsList(){
             <div className="container section-padding">
             <div className="row">
                 <div className="col-lg-12 col-12 mb-5">
-                         <h2 className="newsTitle">News</h2>
+                         <h2 className="newsTitle">Events</h2>
                 </div>
             </div>
                 <div className="newsContainer">
-                     {newsList&& newsList.map(news=>{
-                        let newsImage;
-                        {if(news.image===""){
-                            newsImage=newsImg;
-                        }
-                        else{
-                            newsImage=news.image;
-                        }
+                     {eventList&& eventList.map(event=>{
+                        let eventImage;
+                                                {if(event.image===""){
+                                                    eventImage=newsImg;
+                                                }
+                                                else{
+                                                    eventImage=event.image;
+                                                }
                         return(
-                        <div key={news.id} className="row" onClick={()=>{navigate('/news/'+news.id)}}>
+                        <div key={event.id} className="row" onClick={()=>{navigate('/event/'+event.id)}}>
                          <div >
                             
                                 <div className="newsCard featured-block my-3">
-                                <img src={newsImage} alt="card-img"/>
+                                <img src={event.image} alt="card-img"/>
                                 <div className="content">
                                     
-                                    <h3>{news.title}</h3>
-                                    <p className="text-truncate">{news.content}</p>
+                                    <h3>{event.title}</h3>
+                                    <p className="text-truncate">{event.content}</p>
                                     <Link className="featured-block-read " >Read more....</Link>
                                     <div className="meta">
                                     
-                                    <span className="date">{news.date}</span>
+                                    <span className="date">{event.date}</span>
                                     </div>
                                 </div>
                               
@@ -64,4 +62,5 @@ function NewsList(){
         </>
     )
 }
-export default NewsList
+
+export default UpcomingEvents

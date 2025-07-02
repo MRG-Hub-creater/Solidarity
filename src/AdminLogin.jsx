@@ -25,7 +25,7 @@ function AdminLogin({setIsOpen}) {
 
   return (
    <>
-    <Header/>
+    
     <div className='login-body '>
     <div className="login-box mt-3">
     <i className="bi bi-person-fill-gear "></i>
@@ -46,7 +46,7 @@ function AdminLogin({setIsOpen}) {
     </form>
   </div>
 </div>
-    <Footer/>
+    
    </>
   )
 }

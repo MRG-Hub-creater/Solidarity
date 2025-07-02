@@ -12,8 +12,10 @@ function Header(){
                     
                     <div className="col-lg-8 col-12 d-flex flex-wrap">
                         <p className="d-flex me-4 mb-0">
+                        <a  href='https://www.google.com/maps/place/Islamic+Foundation+Trust+-+IFT/@13.106589,80.249881,16z/data=!4m6!3m5!1s0x3a5265bf24015ad3:0x45b7a705e9ec5826!8m2!3d13.1065893!4d80.2498813!16s%2Fg%2F11b5pjs52s?hl=en&entry=ttu&g_ep=EgoyMDI1MDYyOS4wIKXMDSoASAFQAw%3D%3D' target="_blank">
                             <i className="bi-geo-alt me-2"></i>
                            IFT Complex, #138, Perambur High Road, Chennai, TamilNadu 600012
+                        </a>
                         </p>
 
                         <p className="d-flex mb-0">
@@ -69,8 +71,13 @@ function Header(){
                               <Link className="nav-link click-scroll" to={'/aboutUsDetailed'} >About us</Link>
                         </li> 
 
-                        <li className="nav-item">
-                            <Link className="nav-link click-scroll" to={'/activity'}>Activities</Link>
+                         <li className="nav-item dropdown">
+                            <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</Link>
+
+                            <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><Link className="dropdown-item" to={'/activity'}>What We Do</Link></li>
+                                <li><Link className="dropdown-item" to={'/eventList'}>Upcoming Events</Link></li>
+                            </ul>
                         </li>
 
                         <li className="nav-item">
@@ -78,7 +85,7 @@ function Header(){
                         </li>
 
          
-              {/*******
+             {/**********
               
                         <li className="nav-item dropdown">
                            <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Panel</Link>
@@ -89,8 +96,8 @@ function Header(){
                                 <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>
                             </ul>
                         </li>
-                       */}
-
+                     
+ */}
                         <li className="nav-item dropdown">
                             <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">LeaderShips</Link>
 

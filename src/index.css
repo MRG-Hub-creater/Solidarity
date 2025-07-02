@@ -41,7 +41,8 @@
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #0c9758;
-  --secondary-color:              #5a6f80;
+  --secondary-color2:             #5a6f80;
+  --secondary-color:              #125727 ;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
   --custom-btn-bg-color:          #597081;
@@ -250,6 +251,7 @@ strong {
 .custom-list {
   margin-bottom: 0;
   padding-left: 0;
+  text-align: justify;
 }
 
 .custom-list-item {
@@ -376,8 +378,11 @@ strong {
 
 
 .Blogo{
-  width: 150px;
+  width: 250px;
   height:auto;
+  border-radius: 20px;
+  margin-top: 20px;
+ 
 }
 .navbar-expand-lg .navbar-nav .nav-link {
   margin-right: 0;
@@ -1290,7 +1295,7 @@ blockquote::before {
 }
 
 .site-footer-bottom {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color2);
   position: relative;
   z-index: 2;
   margin-top: 70px;

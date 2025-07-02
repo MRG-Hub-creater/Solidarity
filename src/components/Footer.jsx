@@ -27,7 +27,7 @@ function Footer(){
 
                             <li className="footer-menu-item"><Link className="footer-menu-link" to={'/blogList'}>News</Link></li>
 
-                            <li className="footer-menu-item"><a href="https://forms.gle/wbpCfAWCbURdwHiX6" className="footer-menu-link">Become a Member</a></li>
+                            <li className="footer-menu-item"><a href="https://forms.gle/wbpCfAWCbURdwHiX6" target='_blank' rel='noopener noreferrer' className="footer-menu-link">Become a Member</a></li>
                         </ul>
                     </div>
 
@@ -51,8 +51,10 @@ function Footer(){
                         </p>
 
                         <p className="text-white d-flex mt-3">
+                            <a className=" site-footer-link" href='https://www.google.com/maps/place/Islamic+Foundation+Trust+-+IFT/@13.106589,80.249881,16z/data=!4m6!3m5!1s0x3a5265bf24015ad3:0x45b7a705e9ec5826!8m2!3d13.1065893!4d80.2498813!16s%2Fg%2F11b5pjs52s?hl=en&entry=ttu&g_ep=EgoyMDI1MDYyOS4wIKXMDSoASAFQAw%3D%3D' target="_blank">
                             <i className="bi-geo-alt me-2"></i>
                             IFT Complex, #138, Perambur High Road, Chennai, Tamil Nadu 600012
+                            </a>
                         </p>
                 </div>
               <div className="col-lg-1 col-md-4 mt-5  ">

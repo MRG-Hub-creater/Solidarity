@@ -1,39 +1,33 @@
-
-
+import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer'
-import axios from "axios"
 
-function News(){
-        const {id} =useParams();
-        const [news, setNews] = useState(null);
+function EventsDetailed() {
+  const {id} =useParams();
+        const [event, setEvent] = useState(null);
    useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
             .then((data)=> data.json())
             .then((data)=>{
-                const newsItem = data.news.find(item=>item.id==id);
+                const eventItem = data.event.find(item=>item.id==id);
                
-                setNews(newsItem);
+                setEvent(eventItem);
              })
             .catch((err)=>console.log("Error,",err))},[id]); 
             return(
                 <>
                 
                <div className="container section-padding text-center">
-                 {news&& <div className="row">
-                    
-                        <div  key={news.id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
+                 {event&& <div className="row">
+                        <div  key={event.id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className=" " >
                                 <div className="text-center m-10">
-                                    <h3 className='my-5 newsTitle'  >{news.title}</h3>
+                                    <h3 className='my-5 newsTitle'  >{event.title}</h3>
                                 </div>
-
-                                {news.image&&<div >
-                                     <img className="newsImage center" src={news.image} alt="Image" />
-                                </div>}
+                                <div >
+                                     <img className="newsImage center" src={event.image} alt="Image" />
+                                </div>
                                 <div className=' my-5  newsContent  '>
-                                    <p >{news.content}</p>
+                                    <p >{event.content}</p>
                                
                                 </div>
                                 
@@ -47,4 +41,5 @@ function News(){
            </>
             )
 }
-export default News;
+
+export default EventsDetailed

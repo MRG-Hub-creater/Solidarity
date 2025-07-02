@@ -11,7 +11,6 @@ import News from './components/News.jsx'
 import NotFound from './components/NotFound.jsx'
 import AboutUSDetailed from './components/AboutUsDetailed.jsx'
 import LeaderShip from './components/LeaderShip.jsx'
-import ContactUsDetail from './components/ContactUsDetail.jsx'
 import Activity from './components/Activity.jsx'
 import BlogList from './components/BlogList.jsx'
 import DistrictLeadership from './components/DistrictLeadership.jsx'
@@ -22,6 +21,9 @@ import AdminLogin from './AdminLogin.jsx'
 import PastLeader from './pages/PastLeader.jsx'
 import JoinMember from './pages/JoinMember.jsx'
 import Layout from './components/Layout.jsx'
+import ContactUs from './components/ContactUs.jsx'
+import UpcomingEvents from './pages/UpcomingEvents.jsx'
+import EventsDetailed from './pages/EventsDetailed.jsx'
 
 
 
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
   element:<Activity/>
 },
 {
+  path:'/eventList',
+  element:<UpcomingEvents/>
+},
+{
+  path:'/event/:id',
+  element:<EventsDetailed/>
+},
+{
   path:'/blogList',
   element:<BlogList/>
 },
@@ -75,7 +85,7 @@ const router = createBrowserRouter([
 }
 ,{
   path:'/contact',
-  element:<ContactUsDetail/>
+  element:<ContactUs/>
 },
 {
   path:'/joinMember',

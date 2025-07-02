@@ -8,9 +8,9 @@ import  { useEffect, useState } from 'react'
 
 function AddLeadership() {
     const [districtList, setDistrict]=useState([]);
-      useEffect(()=>{fetch("http://localhost:3000/district")
+      useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
         .then((data)=> data.json())
-        .then((data)=>{setDistrict(data);
+        .then((data)=>{setDistrict(data.district);
           console.log(districtList)
         })
         .catch(err=>console.log("Error,",err))},[])   
