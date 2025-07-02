@@ -13,7 +13,7 @@ function PastLeader() {
         ,[])
   return (
    <>
-   <Header/>
+  
    <div className='container-fluid my-4'>
        <div className='container'>
            <div className='image-container'>
@@ -70,7 +70,7 @@ function PastLeader() {
        </div>
 
 
-   <Footer/>
+  
    </>
   )
 }

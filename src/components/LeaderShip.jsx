@@ -17,7 +17,7 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
   
   return (
     <>
-    <Header/>
+    
     <div className='container-fluid my-4'>
         <div className='container'>
                 <div className='image-container'>
@@ -96,7 +96,7 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
           </div>
           {stateExecutiveList&&stateExecutiveList.map((stateExecutive)=>{
             return(
-                    <div className='district-card'>
+                    <div key={stateExecutive.id} className='district-card'>
                            <div className="district-name">Executive Members   </div>
                          <div className='row my-5'>
                           <div className="leader">
@@ -141,7 +141,7 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
                        </div>
             )
 })}
-    <Footer/>
+    
     
     </>
   )

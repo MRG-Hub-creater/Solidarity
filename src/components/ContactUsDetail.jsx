@@ -5,9 +5,9 @@ import Header from "./Header"
 function ContactUsDetail(){
     return(
         <>
-        <Header/>
+        
         <ContactUs/>
-        <Footer/>
+        
         </>
     )
 }

@@ -21,16 +21,22 @@ import AddLeadership from './adminPage/AddLeadership.jsx'
 import AdminLogin from './AdminLogin.jsx'
 import PastLeader from './pages/PastLeader.jsx'
 import JoinMember from './pages/JoinMember.jsx'
+import Layout from './components/Layout.jsx'
 
 
 
 
 
 const router = createBrowserRouter([
-{
-  path:'/',
-  element:<App/>,
-  errorElement:<NotFound/>
+  {
+    path:'/',
+  element:<Layout/>,
+  errorElement:<NotFound/>,
+    children:[
+      {
+
+  path:'',
+  element:<App/>
 
 },
 {
@@ -70,7 +76,15 @@ const router = createBrowserRouter([
 ,{
   path:'/contact',
   element:<ContactUsDetail/>
-},{
+},
+{
+  path:'/joinMember',
+  element:<JoinMember/>
+}
+    ]
+
+  },
+  ,{
   path:'/addBlog',
   element:<AddBlog/>
 },
@@ -81,10 +95,6 @@ const router = createBrowserRouter([
 {
   path:'/addLeadership',
   element:<AddLeadership/>
-},
-{
-  path:'/joinMember',
-  element:<JoinMember/>
 }
 ])
 

@@ -5,7 +5,7 @@ import DistrictImage from '../assets/Leadership/image92.jpg'
 function AboutUSDetailed(){
     return(
         <>
-       <Header/>
+       
        
                      
                         <div className='container-fluid my-4 '>
@@ -70,7 +70,7 @@ function AboutUSDetailed(){
                         
                     
             </div>
-                <Footer/>
+                
 
         </>
     )

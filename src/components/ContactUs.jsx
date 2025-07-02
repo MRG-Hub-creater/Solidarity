@@ -38,7 +38,7 @@ function ContactUs(){
                                         <i className="bi-telephone me-2"></i>
                                         
                                         <a href="tel:+91 9791522986 ">
-                                            9791522986
+                                            +91 9791522986
                                         </a>
                                     </p>
 

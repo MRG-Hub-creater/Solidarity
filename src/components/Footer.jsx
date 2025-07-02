@@ -25,7 +25,7 @@ function Footer(){
 
                             <li className="footer-menu-item"><Link className="footer-menu-link" to={'/activity'}>Activities</Link></li>
 
-                            <li className="footer-menu-item"><Link className="footer-menu-link" to={'/blogList'}>Blogs</Link></li>
+                            <li className="footer-menu-item"><Link className="footer-menu-link" to={'/blogList'}>News</Link></li>
 
                             <li className="footer-menu-item"><a href="https://forms.gle/wbpCfAWCbURdwHiX6" className="footer-menu-link">Become a Member</a></li>
                         </ul>
@@ -38,7 +38,7 @@ function Footer(){
                             <i className="bi-telephone me-2"></i>
 
                             <a href="tel:+91 9791522986 " className="site-footer-link">
-                               9791522986
+                               +91 9791522986
                             </a>
                         </p>
 

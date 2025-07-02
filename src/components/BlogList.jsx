@@ -6,10 +6,10 @@ import DistrictImage from '../assets/Leadership/image92.jpg'
 function BlogList(){
     return(
         <>
-        <Header/>
+       
        
         <NewsList/>
-        <Footer/>
+       
         </>
     )
 }

@@ -13,7 +13,7 @@ function Header(){
                     <div className="col-lg-8 col-12 d-flex flex-wrap">
                         <p className="d-flex me-4 mb-0">
                             <i className="bi-geo-alt me-2"></i>
-                           IFT Complex, #138, Perambur High Read, Chennai, TamilNadu 600012
+                           IFT Complex, #138, Perambur High Road, Chennai, TamilNadu 600012
                         </p>
 
                         <p className="d-flex mb-0">

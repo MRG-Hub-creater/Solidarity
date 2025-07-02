@@ -8,9 +8,9 @@ function Activity(){
    
     return(
         <>
-        <Header/>
+       
        <ActivityList/>
-        <Footer/>
+        
         </>
     )
 }

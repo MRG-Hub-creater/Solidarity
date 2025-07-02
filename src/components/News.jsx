@@ -19,7 +19,7 @@ function News(){
             .catch((err)=>console.log("Error,",err))},[id]); 
             return(
                 <>
-                <Header/>
+                
                <div className="container ">
                      
                         
@@ -34,7 +34,7 @@ function News(){
                         </div>
                     }
                 </div>
-                <Footer/>
+                
 
            </>
             )
