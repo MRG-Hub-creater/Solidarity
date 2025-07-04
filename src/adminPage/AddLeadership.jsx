@@ -29,7 +29,7 @@ function AddLeadership() {
         <input className='form-control ' type="text" placeholder="President Name" required/>
         <div className='row'>
             <div className='col-4'>
-                <label  className="mt-3 leadersImageText " htmlFor="">President Image</label>
+                <label  className="mt-3 leadersImageText " htmlFor="presidentImage">President Image</label>
             </div>
             
               <div className='col-8'>
@@ -42,7 +42,7 @@ function AddLeadership() {
         <input className='form-control ' type="text" placeholder="Secretary Name" />
         <div className='row'>
             <div className='col-4'>
-                <label  className="mt-3 leadersImageText" htmlFor="">Secretary Image</label>
+                <label  className="mt-3 leadersImageText" htmlFor="secretaryImage">Secretary Image</label>
             </div>
             
               <div className='col-8'>

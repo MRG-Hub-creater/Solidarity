@@ -1,9 +1,24 @@
+import { useEffect, useState } from 'react'
 import logo from '../assets/FlagLogo.jpg'
 import textLogo from '../assets/SolidarityTextLogo.png'
 import { Link,useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import API from '../axios';
 
 function Header(){
+    const [isAdmin,setIsAdmin]=useState(false);
+    const navigate = useNavigate();
+    
+    useEffect(()=>{
+        API.get("/admin/check").then(res=>setIsAdmin(res.data.isAdmin));
+    },[]);
 
+    const logout =async()=>{
+        await API.post('/admin/logout');
+        localStorage.removeItem('isAdmin');
+        setIsAdmin(false);
+        navigate("/");
+    }
     return(
         <>
         <header className="site-header ">
@@ -84,20 +99,6 @@ function Header(){
                             <Link className="nav-link click-scroll" to={'/blogList'}>News</Link>
                         </li>
 
-         
-             {/**********
-              
-                        <li className="nav-item dropdown">
-                           <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Panel</Link>
-
-                            <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                              <li>  <Link className="dropdown-item" to={'/addBlog'}>Add Blog</Link></li>
-                                <li><Link className="dropdown-item" to={'/addNews'}>Add News</Link></li>
-                                <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>
-                            </ul>
-                        </li>
-                     
- */}
                         <li className="nav-item dropdown">
                             <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">LeaderShips</Link>
 
@@ -112,9 +113,25 @@ function Header(){
                             <Link to="/contact" className="nav-link click-scroll">Contact Us</Link>
                         </li>
 
+                               {isAdmin&&<li className="nav-item dropdown">
+                           <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Panel</Link>
+
+                            <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                              <li>  <Link className="dropdown-item" to={'/addBlog'}>Add Blog</Link></li>
+                                <li><Link className="dropdown-item" to={'/addNews'}>Add News</Link></li>
+                                <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>
+                                <li ><p className="dropdown-item" onClick={logout}>Logout</p></li>
+                            </ul>
+                        </li>
+                      
+                        
+                        
+                     }
                         <li className="nav-item me-4 ">
                             <Link to="/joinMember" className="nav-link custom-btn custom-border-btn btn">Join</Link>
                         </li> 
+
+                 
                     </ul>
                 </div>
             </div>

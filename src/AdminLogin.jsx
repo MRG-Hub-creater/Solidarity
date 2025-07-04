@@ -1,28 +1,32 @@
 import React, { useState } from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import API from './axios';
+import { useNavigate } from 'react-router-dom';
 
 
-function AdminLogin({setIsOpen}) {
+
+function AdminLogin() {
   const [email,setEmail]=useState("");
   const [password,setPassword] =useState("");
   const [isSignUp,setIsSignUp]=useState(false) 
    const [error,setError]=useState("")
+   const navigate = useNavigate();
 
  const handleOnSubmit=async(e)=>{
-    e.preventDefault()
+    e.preventDefault();
     let endpoint=(isSignUp) ? "signUp" : "login"
-    await axios.post(`http://localhost:5000/admin/${endpoint}`,{email,password})
-    .then((res)=>{
-        localStorage.setItem("token",res.data.token)
-        localStorage.setItem("user",JSON.stringify(res.data.user))
-        setIsOpen()
-    })
-    .catch(data=>setError(data.response?.data?.error))
+    try{
+    await API.post(`/admin/${endpoint}`,{email,password})
+    
+        localStorage.setItem("isAdmin","true");
+        navigate('/');
+    
+  }
+    catch(data){
+      setError(data.response?.data?.error);
   }
 
 
-
+ }
   return (
    <>
     
@@ -40,7 +44,7 @@ function AdminLogin({setIsOpen}) {
                 <input type="password" className='input' onChange={(e)=>setPassword(e.target.value)} required></input>
             </div>
              <button type='submit'>{(isSignUp) ? "Sign Up": "Login"}</button><br></br>
-          { (error!="") && <h6 className='error'>{error}</h6>}<br></br>
+          { (error!="") && <h6 className='error my-3'>{error}</h6>}<br></br>
             <p onClick={()=>setIsSignUp(pre=>!pre)}>{(isSignUp) ? "Already have an account": "Create new account"}</p>
       
     </form>
@@ -49,6 +53,6 @@ function AdminLogin({setIsOpen}) {
     
    </>
   )
-}
 
+}
 export default AdminLogin

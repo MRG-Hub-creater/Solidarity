@@ -74,7 +74,7 @@ function ContactUs(){
 
                                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" className="form-control" placeholder="mail@gmail.com" required/>
 
-                                <textarea name="message" rows="5" className="form-control" id="message" placeholder="What can we help you?"></textarea>
+                                <textarea name="message" rows="5" className="form-control" id="message" placeholder=""></textarea>
 
                                 <button  className="form-control">Send Message</button>
                             </form>
