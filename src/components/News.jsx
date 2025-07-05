@@ -3,27 +3,24 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from './Header';
-import Footer from './Footer'
-import axios from "axios"
+import API from '../axios';
+
 
 function News(){
         const {id} =useParams();
         const [news, setNews] = useState(null);
-   useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
-            .then((data)=> data.json())
-            .then((data)=>{
-                const newsItem = data.news.find(item=>item.id==id);
-               
-                setNews(newsItem);
+   useEffect(()=>{
+              API.get(`/news/${id}`).then((res)=>{
+                setNews(res.data);
              })
             .catch((err)=>console.log("Error,",err))},[id]); 
             return(
                 <>
-                
+                <Header/>
                <div className="container section-padding text-center">
                  {news&& <div className="row">
                     
-                        <div  key={news.id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div  key={news._id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className=" " >
                                 <div className="text-center m-10">
                                     <h3 className='my-5 newsTitle'  >{news.title}</h3>

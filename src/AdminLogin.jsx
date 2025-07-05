@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import API from './axios';
 import { useNavigate } from 'react-router-dom';
+import Header from './components/Header';
 
 
 
@@ -29,18 +30,18 @@ function AdminLogin() {
  }
   return (
    <>
-    
+    <Header/>
     <div className='login-body '>
     <div className="login-box mt-3">
     <i className="bi bi-person-fill-gear "></i>
     <h2>ADMIN LOGIN</h2>
     <form className='form' onSubmit={handleOnSubmit}>
       <div className='form-control'>
-                <label>Email</label>
+                <label htmlFor='email'>Email</label>
                 <input type="email" className='input' onChange={(e)=>setEmail(e.target.value)} required></input>
             </div>
             <div className='form-control'>
-                <label>Password</label>
+                <label htmlFor='password'>Password</label>
                 <input type="password" className='input' onChange={(e)=>setPassword(e.target.value)} required></input>
             </div>
              <button type='submit'>{(isSignUp) ? "Sign Up": "Login"}</button><br></br>

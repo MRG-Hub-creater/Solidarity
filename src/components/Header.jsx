@@ -96,7 +96,7 @@ function Header(){
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link click-scroll" to={'/blogList'}>News</Link>
+                            <Link className="nav-link click-scroll" to={'/newsList'}>News</Link>
                         </li>
 
                         <li className="nav-item dropdown">
@@ -117,10 +117,10 @@ function Header(){
                            <Link className="nav-link click-scroll dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Panel</Link>
 
                             <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                              <li>  <Link className="dropdown-item" to={'/addBlog'}>Add Blog</Link></li>
+                              <li>  <Link className="dropdown-item" to={'/addEvents'}>Add Upcoming Events</Link></li>
                                 <li><Link className="dropdown-item" to={'/addNews'}>Add News</Link></li>
-                                <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>
-                                <li ><p className="dropdown-item" onClick={logout}>Logout</p></li>
+                           {/***    <li><Link className="dropdown-item" to={'/addLeadership'}>Add Leadership</Link></li>  */} 
+                                <li ><Link className="dropdown-item" onClick={logout}>Logout</Link></li>
                             </ul>
                         </li>
                       

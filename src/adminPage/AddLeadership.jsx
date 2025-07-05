@@ -98,7 +98,7 @@ function AddLeadership() {
         </div>
         
   </div>
-    <Footer/>
+    
     </>
   )
 }

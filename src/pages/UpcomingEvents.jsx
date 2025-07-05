@@ -1,21 +1,21 @@
 import React from 'react'
 import { useState,useEffect, use } from "react"
 import { Link, useNavigate } from "react-router-dom";
+import Header from '../components/Header';
+import API from '../axios';
 
 function UpcomingEvents() {
  const [eventList, setEvent] = useState(null);
     const navigate = useNavigate();
 
-        useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
-            .then((data)=> data.json())
-            .then((data)=>{setEvent(data.event);
-            })
-            .catch(err=>console.log("Error,",err))},[])   
-
+        
+            useEffect(()=>{
+                          API.get("/blog").then(res=>setEvent(res.data));
+                        },[])
     return(
         <>
         
-               
+              <Header/>
             <div className="container section-padding">
             <div className="row">
                 <div className="col-lg-12 col-12 mb-5">
@@ -32,7 +32,7 @@ function UpcomingEvents() {
                                                     eventImage=event.image;
                                                 }
                         return(
-                        <div key={event.id} className="row" onClick={()=>{navigate('/event/'+event.id)}}>
+                        <div key={event._id} className="row" onClick={()=>{navigate('/event/'+event._id)}}>
                          <div >
                             
                                 <div className="newsCard featured-block my-3">
@@ -44,7 +44,11 @@ function UpcomingEvents() {
                                     <Link className="featured-block-read " >Read more....</Link>
                                     <div className="meta">
                                     
-                                    <span className="date">{event.date}</span>
+                                    <span className="date">{new Date(event.date).toLocaleDateString('en-IN',{
+                                      day:"numeric",
+                                      month:"long",
+                                      year:"2-digit"
+                                    })}</span>
                                     </div>
                                 </div>
                               

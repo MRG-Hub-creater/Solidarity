@@ -1,11 +1,11 @@
 import AboutUs from "./components/AboutUs"
-
-import NewsList from "./components/NewsList"
 import ContactUs from "./components/ContactUs"
 
 import Slide from "./components/Slide"
 import ActivityList from "./components/ActivityList"
 import { Helmet } from 'react-helmet';
+import Header from "./components/Header"
+import BlogList from "./components/BlogList"
 
 
 function App(){
@@ -21,11 +21,11 @@ function App(){
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
     
-    
+    <Header/>
     <Slide/>
     <ActivityList/>
     <AboutUs/>
-    <NewsList/>
+    <BlogList/>
     <ContactUs/>
     
     

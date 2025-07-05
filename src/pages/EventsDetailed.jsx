@@ -1,24 +1,25 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../components/Header';
+import API from '../axios';
 
 function EventsDetailed() {
   const {id} =useParams();
         const [event, setEvent] = useState(null);
-   useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-Temp/refs/heads/main/db.json")
-            .then((data)=> data.json())
-            .then((data)=>{
-                const eventItem = data.event.find(item=>item.id==id);
-               
-                setEvent(eventItem);
+            useEffect(()=>{
+              API.get(`/blog/${id}`).then((res)=>{
+                setEvent(res.data);
              })
             .catch((err)=>console.log("Error,",err))},[id]); 
+
+
             return(
                 <>
-                
+                <Header/>
                <div className="container section-padding text-center">
                  {event&& <div className="row">
-                        <div  key={event.id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div  key={event._id} className="col-lg-12 col-md-6 col-12 mb-4 mb-lg-0">
                             <div className=" " >
                                 <div className="text-center m-10">
                                     <h3 className='my-5 newsTitle'  >{event.title}</h3>

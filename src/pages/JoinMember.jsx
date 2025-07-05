@@ -7,7 +7,7 @@ import backGroundImage from '../assets/joinMembers.jpg'
 function JoinMember() {
   return (
     <>
-    
+    <Header/>
      <div className='join-background'>               
            
      </div>

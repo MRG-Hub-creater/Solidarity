@@ -17,7 +17,7 @@ useEffect(()=>{fetch("https://raw.githubusercontent.com/MRG-Hub-creater/BackEnd-
   
   return (
     <>
-    
+    <Header/>
     <div className='container-fluid my-4'>
         <div className='container'>
                 <div className='image-container'>
